@@ -78,5 +78,5 @@
 
   function displayOffer(response){
     console.log(response);
-    document.getElementById(rides).append("Hey");
+    alert("Welcome " + response.name + "!");
   }
