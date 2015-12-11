@@ -11,7 +11,7 @@
       testAPI();
       displayOffer(response);
     } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebok, but not your app.
+      // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     } else {
