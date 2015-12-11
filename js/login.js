@@ -10,6 +10,7 @@
       // Logged into your app and Facebook.
       testAPI();
       displayOffer(response);
+      location.reload(true);
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -79,6 +80,5 @@
   function displayOffer(response){
     console.log(response);
     alert("Welcome " + response.name + "!");
-    location.reload(true);
     // Comment
   }
