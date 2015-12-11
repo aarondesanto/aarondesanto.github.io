@@ -27,7 +27,7 @@
       <li><a href="#about">about</a></li>
       <li><a href="#contact">contact</a></li>
       <li><a href="#rides">login</a></li> -->
-      <li class="burger"><a class="ham">&equiv;</a>
+      <li class="hamburger"><a>&equiv;</a>
         <ul>
           <a href="#home"><li>home</li></a>
           <a href="#rides"><li>rides</li></a>
@@ -61,6 +61,9 @@
 <section id="rides">
     <h2>Rides</h2>
     <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="true"></div>
+    <div ng-controller="offercontrol">
+      <div ng-hide="offer">TEST</div>
+    </div>
     <ng-view />
 </section>
 

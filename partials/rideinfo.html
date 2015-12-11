@@ -1,17 +1,22 @@
 <h4> Directions: </h4>
 <ol>
 	<li> Sign in using Facebook for discounts & a personalized experience! (optional but highly recommended) </li>
-	<li> Browse available rides </li> 
+	<li> Browse available rides </li>
 	<li> Select an interesting ride to see more details </li>
 </ol>
 
-<h2 class="ride-title"><a href="/ride1">{{rides[0].name}}</a></h2>
-		<div class="route">
-				<span class="area">{{rides[0].area}}</span>
-				<span class="miles">{{rides[0].miles}} mi</span>
-				<span class="time">{{rides[0].time}} min</span>
-				<span class="stops">{{rides[0].stops}} stops</span>
-				<span class="ride-description">Gather your picnic at stops along the way then stop at Belle Isle.</span>
-		</div>
+<form id="search-form" >
+  <h3>Search by Neighborhood or Name</h3>
+  <input type="text" ng-model="nameOrarea">
+</form>
 
-
+<div ng-repeat="data in rides | filter: nameOrarea | orderBy: 'name'">
+  <h2 class="ride-title"><a href="/ride1">{{data.name}}</a></h2>
+  <div class="route">
+  	<h5 class="area">Neighborhood: {{data.area}}</h5>
+		<span class="miles">Distance: {{data.miles}} mi /</span>
+		<span class="time">Time: {{data.time}} min / </span>
+		<span class="stops">Stops: {{data.stops}} stops</span>
+		<p class="ride-description">{{data.description}}</p>
+	</div>
+</div>
