@@ -5,5 +5,7 @@ The URL is my name .github.io, but that's just because I'm hosting from my githu
     https://pages.github.com
   
 To upload to the site, simple save the file you're working on, then add-commit-push like normal.
+
 Poof.
+
 It's live.
