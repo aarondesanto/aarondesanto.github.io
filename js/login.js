@@ -78,5 +78,5 @@
 
   function displayOffer(response){
     console.log(response);
-    alert(response.name);
+    alert("Welcome Blake DeBaske!");
   }
