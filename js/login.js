@@ -78,5 +78,5 @@
 
   function displayOffer(response){
     console.log(response);
-    return response;
+    alert(response.name);
   }
