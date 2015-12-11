@@ -2,7 +2,7 @@ var app = angular.module("myApp", ["ngRoute"]);
 
 app.controller("offercontrol", function($scope){
   $scope.offer = displayOffer();
-  console.log(offer);
+  console.log($scope.offer);
 });
 
 app.config(function($routeProvider, $locationProvider) {
