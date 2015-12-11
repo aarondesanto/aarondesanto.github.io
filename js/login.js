@@ -79,5 +79,6 @@
   function displayOffer(response){
     console.log(response);
     alert("Welcome " + response.name + "!");
+    location.reload(true);
     // Comment
   }
