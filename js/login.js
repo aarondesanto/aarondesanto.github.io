@@ -75,11 +75,11 @@
     });
   }
 
-  function displayOffer(response){
-    console.log(response);
+  function displayOffer(){
     FB.api('/me', {fields: 'id,name,email'}, function(response) {
       console.log(response);
       console.log('Successful login for: ' + response.name);
       alert("Welcome " + response.name + "!");
+      // if statement here
     });
   }
