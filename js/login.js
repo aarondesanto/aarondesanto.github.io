@@ -75,15 +75,15 @@
     });
   }
 
-  function displayOffer() {
-    var connect;
-    FB.api('/me', {fields: 'id,name,email'}, function(response) {
-      console.log(response);
-      connect = response
-    })
-       if("error" in connect) {
-        return false;
-      }else {
-        return true;
-      }
-  }
+  // function displayOffer() {
+  //   var connect;
+  //   FB.api('/me', {fields: 'id,name,email'}, function(response) {
+  //     console.log(response);
+  //     connect = response
+  //   })
+  //      if("error" in connect) {
+  //       return false;
+  //     }else {
+  //       return true;
+  //     }
+  // }
