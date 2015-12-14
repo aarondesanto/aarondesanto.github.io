@@ -78,12 +78,10 @@
   function displayOffer() {
     FB.api('/me', {fields: 'id,name,email'}, function(response) {
       console.log(response);
-      console.log('Successful login for: ' + response.name);
-      alert("Welcome " + response.name + "!");
       if("error" in response) {
-        console.log("error");
+        return false;
       }else {
-        console.log("success");
+        return true;
       }
     });
   }
