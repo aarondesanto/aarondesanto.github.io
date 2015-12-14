@@ -80,6 +80,10 @@
       console.log(response);
       console.log('Successful login for: ' + response.name);
       alert("Welcome " + response.name + "!");
-      // if statement here
+      if("error" in response) {
+        console.log("error");
+      }else {
+        console.log("success");
+      }
     });
   }
