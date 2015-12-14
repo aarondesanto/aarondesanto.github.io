@@ -8,6 +8,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
+      console.log(response.status);
       testAPI();
       displayOffer(response);
     } else if (response.status === 'not_authorized') {
