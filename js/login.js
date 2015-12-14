@@ -1,4 +1,5 @@
   // This is called with the results from from FB.getLoginStatus().
+  // var statusResponse;
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -8,6 +9,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
+      // statusResponse = 'connected';
       console.log("Connected.");
       testAPI();
       displayOffer(response);
@@ -72,7 +74,8 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
+    FB.api('/me', {fields: 'id,name,email'}, function(response) {
+      console.log(response);
       console.log('Successful login for: ' + response.name);
     });
   }
