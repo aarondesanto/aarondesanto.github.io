@@ -1,7 +1,7 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
 app.controller("offercontrol", function($scope){
-  $scope.offer = displayOffer();
+  $scope.offer = true;
   console.log($scope.offer);
 });
 
