@@ -1,5 +1,4 @@
   // This is called with the results from from FB.getLoginStatus().
-  // var statusResponse;
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -9,10 +8,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      // statusResponse = 'connected';
-      console.log("Connected.");
       testAPI();
-      displayOffer(response);
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -75,12 +71,15 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', {fields: 'id,name,email'}, function(response) {
-      console.log(response);
       console.log('Successful login for: ' + response.name);
     });
   }
 
   function displayOffer(response){
     console.log(response);
-    alert("Welcome Blake DeBaske!");
+    FB.api('/me', {fields: 'id,name,email'}, function(response) {
+      console.log(response);
+      console.log('Successful login for: ' + response.name);
+      alert("Welcome " + response.name + "!");
+    });
   }
