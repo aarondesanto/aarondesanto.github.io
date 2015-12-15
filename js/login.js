@@ -2,7 +2,7 @@ function statusChangeCallback(response) {
   console.log('statusChangeCallback: ' + response.status);
   if (response.status === 'connected') {
     console.log("Status: " + response.status);
-    testAPI();
+    // testAPI();
     userLogged();
   } else if (response.status === 'not_authorized') {
     console.log("Status: " + response.status);
@@ -14,11 +14,11 @@ function statusChangeCallback(response) {
 };
 
 
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
+// function checkLoginState() {
+//   FB.getLoginStatus(function(response) {
+//     statusChangeCallback(response);
+//   });
+// }
 
 
 window.fbAsyncInit = function() {
@@ -44,12 +44,12 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
-function testAPI() {
-  console.log('Welcome!  Fetching your information.... ');
-  FB.api('/me', function(response) {
-    console.log('Successful login for: ' + response.name);
-  });
-};
+// function testAPI() {
+//   console.log('Welcome!  Fetching your information.... ');
+//   FB.api('/me', function(response) {
+//     console.log('Successful login for: ' + response.name);
+//   });
+// };
 
 
 function userLogged() {
