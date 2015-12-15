@@ -3,7 +3,7 @@ var app = angular.module("myApp", ["ngRoute"]);
 
 app.controller("offercontrol", function($scope, $interval){
   $interval(function() {
-    console.log("Uh...");
+    console.log("Checking login status...");
     FB.getLoginStatus(function(response) {
       console.log(response);
     });
