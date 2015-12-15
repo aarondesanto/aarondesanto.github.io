@@ -1,10 +1,14 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
 
-// app.controller("offercontrol", function($scope){
-//   $scope.offer = displayOffer();
-//   console.log($scope.offer);
-// });
+app.controller("offercontrol", function($scope, $interval){
+  $interval(function() {
+    console.log("Uh...");
+    FB.getLoginStatus(function(response) {
+      console.log(response);
+    });
+  }, 6000, 1)
+});
 
 
 

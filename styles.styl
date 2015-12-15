@@ -19,7 +19,7 @@ html, body
   top 0
   width 100%
   height 48.4px
-  background-color blue
+  background-color #2075df
   ul
     position relative
     display inline-table
@@ -27,9 +27,10 @@ html, body
     list-style none
     ul
       display none
-      background #5f6975
+      background #1860c0
       position absolute
       top 100%
+      right 0
       li
         float none
         position relative
@@ -46,21 +47,33 @@ html, body
       a
         display block
         padding 15px 30px
-        color #757575
+        color #fff
         text-decoration none
       ul
         width 85px
         a
           text-align center
           padding 5px 10px
+          font-weight bold
     li:hover
-      background-color #4b545f
+      background-color #1055bf
     li:hover > ul
       display block
-    li:hover a
-      color #fff
     .hamburger
       float right
+      width 83px
+      text-align center
+      a
+        padding 3px 0
+        font-size 2.3em
+      ul
+        width 140px
+        a
+          padding 0
+          font-size 1em
+          li
+            height 48px
+            padding-top 15px
   ul:after
     content ""
     clear both
