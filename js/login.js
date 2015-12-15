@@ -12,7 +12,7 @@
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('members-only').innerHTML = 'Please log ' +
-        'into this app.';
+        'into Kickstand with Facebook.';
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
