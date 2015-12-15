@@ -1,14 +1,17 @@
 function statusChangeCallback(response) {
   console.log('statusChangeCallback: ' + response.status);
   if (response.status === 'connected') {
+    console.log("Status: " + response.status);
     testAPI();
-    document.getElementById('members-only').innerText = 'Welcome.';
+    userLogged();
   } else if (response.status === 'not_authorized') {
-    document.getElementById('members-only').innerText = 'Please log into Kickstand with Facebook.';
+    console.log("Status: " + response.status);
+    userNotLogged();
   } else {
-    document.getElementById('members-only').innerText = 'Please log into Facebook.';
+    console.log("Status: " + response.status);
+    userNotLogged();
   }
-}
+};
 
 
 function checkLoginState() {
@@ -17,6 +20,7 @@ function checkLoginState() {
   });
 }
 
+
 window.fbAsyncInit = function() {
   FB.init({
     appId      : 428380597359730,
@@ -24,7 +28,6 @@ window.fbAsyncInit = function() {
     xfbml      : true,
     version    : 'v2.2'
   });
-
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -45,6 +48,15 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
-    displayOffer(response);
   });
-}
+};
+
+
+function userLogged() {
+  FB.api('/me', function(response) {
+    document.getElementById('members-only').innerText = 'Hi ' + response.name + "!";
+  });
+};
+function userNotLogged() {
+  document.getElementById('members-only').innerText = 'Please log into Kickstand with Facebook.';
+};
