@@ -9,9 +9,8 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
-      displayOffer(response);
     } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
+      // The person is logged into Facebook, but not your app. 
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     } else {
@@ -75,9 +74,4 @@
       console.log('Successful login for: ' + response.name);
       displayOffer(response);
     });
-  }
-
-  function displayOffer(response){
-    console.log(response);
-    alert("Welcome Blake DeBaske");
   }
