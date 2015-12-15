@@ -1,17 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
-
-app.controller("offercontrol", function($scope, $interval){
-  $interval(function() {
-    console.log("Checking login status...");
-    FB.getLoginStatus(function(response) {
-      console.log(response);
-    });
-  }, 6000, 1)
-});
-
-
-
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
     .when("/", {
