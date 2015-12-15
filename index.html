@@ -12,7 +12,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-  <!-- Commented -->
   <script src='js/app.js'></script>
   <script src='js/map.service.js'></script>
   <script src='js/login.js'></script>
@@ -40,13 +39,13 @@
     </ul>
   </nav>
 <section id="home">
-  <div class="home-image">
+  <div class="home-image"> 
     <img src= img/greenbikecrop.jpg>
   </div>
      <h1>KICKSTAND</h1>
 <!--      <div class="intro-divider">
       <h4> USE YOUR KICKSTAND, EXPERIENCE DETROIT </h4>
-    </div> -->
+    </div> -->  
 </section>
 
 <section id="about">
@@ -57,8 +56,8 @@
 <section id="rides">
     <h2>Rides</h2>
     <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="true"></div>
-    <div>
-      <div id="members-only">___________000___000___000_____________</div>
+    <div ng-controller="offercontrol">
+      <div ng-hide="offer">TEST</div>
     </div>
     <ng-view />
 </section>

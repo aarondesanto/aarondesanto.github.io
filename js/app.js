@@ -1,5 +1,8 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
+app.controller("offercontrol", function($scope){
+  $scope.offer = true;
+});
 
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
