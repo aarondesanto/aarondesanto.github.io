@@ -39,7 +39,7 @@ FB.init({
   version    : 'v2.5' // use version 2.2
 });
 
-// Now that we've initialized the JavaScript SDK, we call
+// Now that we've initialized the JavaScript SDK, we calls
 // FB.getLoginStatus().  This function gets the state of the
 // person visiting this page and can return one of three states to
 // the callback you provide.  They can be:
