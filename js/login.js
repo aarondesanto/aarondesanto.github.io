@@ -19,7 +19,7 @@ function checkLoginState() {
     statusChangeCallback(response);
   });
 }
-
+ 
 
 window.fbAsyncInit = function() {
   FB.init({
