@@ -2,6 +2,7 @@ function statusChangeCallback(response) {
   console.log('statusChangeCallback: ' + response.status);
   if (response.status === 'connected') {
     console.log("Status: " + response.status);
+    // testAPI();
     userLogged();
   } else if (response.status === 'not_authorized') {
     console.log("Status: " + response.status);
@@ -43,6 +44,14 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
+// function testAPI() {
+//   console.log('Welcome!  Fetching your information.... ');
+//   FB.api('/me', function(response) {
+//     console.log('Successful login for: ' + response.name);
+//   }); 
+// };
+
+
 function userLogged() {
   FB.api('/me', function(response) {
     var memWrap = document.getElementById("members-only"),
@@ -54,7 +63,7 @@ function userLogged() {
     memIcon.setAttribute("src", "img/memicon64.png");
 
     memText.innerText = "Keep an eye out for this icon to find deals from local businesses.";
-    memDiv.innerText = "Hi, " + response.first_name + "!";
+    memDiv.innerText = "Hi, " + response.name + "!";
 
     memDiv.appendChild(memIcon);
     memDiv.appendChild(memText);
