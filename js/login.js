@@ -60,3 +60,4 @@ function userLogged() {
 function userNotLogged() {
   document.getElementById('members-only').innerText = 'Please log into Kickstand with Facebook.';
 };
+ 
