@@ -69,7 +69,6 @@ function userLogged() {
     memDiv.appendChild(memText);
   });
 };
-
 function userNotLogged() {
   var memWrap = document.getElementById("members-only");
   memWrap.style.display="none";
