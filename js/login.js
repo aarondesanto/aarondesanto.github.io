@@ -17,7 +17,7 @@ function statusChangeCallback(response) {
 // function checkLoginState() {
 //   FB.getLoginStatus(function(response) {
 //     statusChangeCallback(response);
-//   }); 
+//   });
 // }
 
 
@@ -44,7 +44,7 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
-// function testAPI() {
+// function testAPI() { 
 //   console.log('Welcome!  Fetching your information.... ');
 //   FB.api('/me', function(response) {
 //     console.log('Successful login for: ' + response.name);
