@@ -1,8 +1,25 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
-app.controller("offercontrol", function($scope){
-  $scope.offer = true;
-});
+// var personalization = [
+//   {
+//     name: "Ariella Centlivre",
+//     id: "",
+//     favRoutes: ["farmtopicnic", "beersgears"],
+//     badges: ["new", "farmfresh"]
+//   },
+//   {
+//     name: "Blake DeBaske",
+//     id: "",
+//     favRoutes: ["farmtopicnic"],
+//     badges: ["new", "farmfresh"]
+//   },
+//   { 
+//     name: "Ellen Zimmer",
+//     id: "",
+//     favRoutes: ["farmtopicnic", "beersgears", "trailscocktails"],
+//     badges: ["new", "farmfresh", "over21", "liqrlovr"]
+//   },
+// ];
 
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
