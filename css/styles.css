@@ -22,6 +22,10 @@ span {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'GrandHotel';
+  src: url("../fonts/GrandHotel-Regular.otf");
+}
 html,
 body {
   height: 100%;
@@ -36,17 +40,15 @@ h1 {
   font-family: "Oswald", cursive;
   font-weight: 700;
   line-height: 76px;
-  font-size: 102px;
   position: absolute;
   top: 100px;
   color: #fff;
-  left: 50px;
-  font-size: 40px;
+  font-size: 70px;
 }
 h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 36px;
   color: #e1b596;
   margin: 10px 0 25px 0;
   text-align: center;
@@ -61,7 +63,7 @@ h3 {
 }
 h4 {
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 16px;
   color: #2c2b2b;
   margin: 10px 0;
@@ -88,52 +90,66 @@ h5 .area {
   margin-left: 25px;
 }
 .login-list {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 12px;
-  color: #da594c;
+  font-size: 16px;
+  color: #a52a2a;
 }
 .fa {
   margin-right: 10px !important;
+}
+#directions {
+  font-size: 28px;
+  margin-top: 25px;
+  font-weight: 500;
 }
 a.main-title {
   font-family: "Oswald", cursive;
   font-weight: 700;
   color: #e1b596;
 }
+h3#brand-message {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+  position: absolute;
+  top: 170px;
+}
 /*====Home*=======*/
-#section {
+section {
   padding-top: 40px;
 }
 #home {
   height: 350px;
-  width: 400px;
   position: relative;
-}
-#home div ul li {
-  margin-left: 1.5em;
 }
 #image-box {
   position: absolute;
-  width: 100%;
+  width: 320px;
   top: 40px;
-  padding-top: 10px;
+  height: 320px;
   background-image: url("../img/greenbikecrop.jpg");
 }
 .navbar {
-  z-index: 1;
+  z-index: 10;
   position: fixed;
   top: 0;
-  width: 360px;
+  width: 100%;
   height: 48.4px;
   margin: 0;
+  border-radius: 0;
   padding: 0;
-  background-color: #00f;
+  background-color: #75ad4c;
+}
+.navbar .big-nav {
+  display: none;
 }
 .navbar ul {
   position: relative;
   display: inline-table;
-  width: 360px;
+  width: 100%;
   margin: -1px 0 0 -1px;
   padding: 0;
   list-style: none;
@@ -143,36 +159,35 @@ a.main-title {
 }
 .navbar ul li a {
   display: block;
-  padding: 15px 30px;
+  padding: 9px 10px;
+  font-family: "GrandHotel", "Oswald";
+  font-size: 2.3em;
+  line-height: 1em;
   color: #fff;
   text-decoration: none;
 }
 .navbar ul li ul {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 1px;
   width: 100%;
-  background: #5f6975;
+  background: #528130;
 }
 .navbar ul li ul li {
   float: none;
   position: relative;
+  font-family: "Oswald";
 }
 .navbar ul li ul a {
   text-align: center;
   padding: 5px 10px;
 }
 .navbar ul li ul a:hover {
-  background: #4b545f;
-}
-.navbar ul li ul ul {
-  position: absolute;
-  left: 100%;
-  top: 0;
+  background: #629140;
 }
 .navbar ul li:hover {
-  background-color: #4b545f;
+  background-color: #629140;
 }
 .navbar ul li:hover > ul {
   display: block;
@@ -182,14 +197,14 @@ a.main-title {
 }
 .navbar ul .hamburger {
   float: right;
-  font-size: 2.4em;
+  font-size: 1.6em;
   font-weight: bold;
 }
 .navbar ul .hamburger a {
-  padding: 0 20px 1px 20px;
+  padding: 0 20px;
 }
 .navbar ul .hamburger ul li {
-  font-size: 1em;
+  font-size: 0.5em;
   font-weight: normal;
 }
 .navbar ul:after {
@@ -198,19 +213,38 @@ a.main-title {
   display: block;
 }
 #about {
+  max-width: 320px;
   max-height: 250px;
-  width: 360px;
+  margin: 0 0 0 5px;
   padding-top: 60px;
   text-align: center;
 }
 #about p {
   text-align: justify;
 }
+footer {
+  background-color: #75ad4c;
+  color: #fff;
+}
+footer .container {
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+.my-route {
+  width: 250px !important;
+  margin: 15px 5px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
 ul#directions {
   margin-left: 25px;
 }
 #map {
-  height: 200px;
+  height: 250px;
   width: 100%;
 }
 h3.ride-title a {
@@ -228,48 +262,47 @@ ul.login li {
   font-weight: 400;
 }
 #rides {
-  padding-top: 20px;
+  padding-top: 60px;
 }
 #rides h3 {
   text-align: center;
 }
+#search {
+  margin-top: 25px;
+}
 #search-form {
   text-align: center;
 }
-#main-contact {
+h5.ride-description {
   text-align: center;
+  font-style: normal;
+}
+#contact {
+  width: 320px;
 }
 #contact input,
 textarea {
-  margin: 0 0px 10px 10px;
-  padding: 10px;
+  margin: 0 0 10px 10px;
+  padding: 5px;
+  font-family: 'Lato', sans-serif;
+}
+#contact h4 {
+  text-align: center;
+}
+#contact p {
+  text-align: center;
 }
 input,
 textarea {
   background-color: #f6f6f6;
   margin: 10px;
+  border: 3px double #659d44;
+  border-radius: 3px;
 }
 input[type=text],
 input[type=email] {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-}
-#contact p {
-  font-size: 16px;
-}
-#home {
-  height: 350px;
-  width: 400px;
-  position: relative;
-}
-#home div ul li {
-  margin-left: 1.5em;
-}
-.home-image {
-  position: absolute;
-  width: 100%;
-  top: 40px;
-  padding-top: 10px;
 }
 #members-only {
   display: none;
@@ -294,21 +327,63 @@ input[type=email] {
   display: inline-block;
   float: right;
 }
-.ridecol-top {
-  border: solid #000 1px;
+.ride-descrip {
+  margin: 8px 0px;
+  text-align: center;
+  color: #a52a2a;
+  font-size: 20px;
+  font-style: italic;
+}
+.ride-specifics {
+  display: inline-block;
+  padding: 25px;
+}
+.ride-info {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #838383;
+  font-weight: 500;
 }
 .ride-info p {
   margin: 8px 0px;
 }
+.ride-info-name {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #838383;
+  font-weight: 700;
+  font-weight: bold;
+}
+.map-title {
+  font-size: 25px;
+  color: #a52a2a;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+.map-info {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #a52a2a;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px;
+}
+#ride-list {
+  width: 360px;
+}
 @media only screen and (min-width: 960px) {
   #image-box {
-    background-image: url("../img/greenbike1200.jpg");
+    background: url("../img/greenbike1200.jpg") center center no-repeat;
+    height: 100%;
+    background-position-y: 85%;
   }
   #about {
     width: 100%;
   }
   #home {
     width: 100%;
+    text-align: center;
+    height: 500px;
   }
   .my-route {
     width: 250px !important;
@@ -318,9 +393,6 @@ input[type=email] {
     vertical-align: top;
   }
   h5.area {
-    text-align: center;
-  }
-  p.ride-description {
     text-align: center;
   }
   .miles,
@@ -335,6 +407,33 @@ input[type=email] {
     font-size: 3em;
   }
   .navbar {
-    width: 100%;
+    height: 48.4px;
+  }
+  .navbar .big-nav {
+    display: inline-block;
+  }
+  .navbar .big-nav a {
+    height: 50.4px;
+    font-family: "Oswald";
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+  .navbar .big-nav:nth-child(2n) a {
+    font-style: italic;
+  }
+  .navbar .big-nav:nth-child(3n) {
+    float: right;
+  }
+  .navbar .big-nav:nth-child(4n) {
+    float: right;
+  }
+  .navbar .big-nav:nth-child(4n) a {
+    font-style: normal;
+  }
+  .navbar .big-nav:nth-child(5n) {
+    float: right;
+  }
+  .navbar .hamburger {
+    display: none;
   }
 }
