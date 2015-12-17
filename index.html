@@ -23,11 +23,10 @@
   <script src='js/ride1.controller.js'></script>
   <script src='js/ride2.controller.js'></script>
   <base href="/" />
-
-<title>Final Project</title>
+  <title>Final Project</title>
 </head>
-
 <body>
+
   <nav class="navbar">
     <ul>
       <li><a class="main-title" href="/">Kickstand</a></li>
@@ -46,10 +45,11 @@
       </li>
     </ul>
   </nav>
+
   <section id="home" class="container">
     <div id="image-box" class="container">
           <h1>KICKSTAND</h1>
-          <h3 id="brand-message">Drop Your Kickstand, Discover  Detroit</h3>
+          <h3 id="brand-message">Drop Your Kickstand, Discover Detroit</h3>
     </div>
   </section>
 
@@ -65,14 +65,16 @@
   </section>
 
   <section id="rides" class="container">
-    <h2>Rides</h2>
+    <h2>Take a Ride </h2>
     <div class="fb-login-button" data-scope="public_profile, email, user_friends" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="true" onlogin="checkLoginState()"></div>
     <div id="members-only">
       <div id="mem-content">
       </div>
     </div>
     <ng-view></ng-view>
-    <div class="fb-comments" data-href="http://aarondesanto.github.io/" data-numposts="5"></div>
+    <div class="fb-comment-wrapper">
+      <div class="fb-comments" data-href="http://aarondesanto.github.io/" data-numposts="5"></div>
+    </div>
   </section>
 
   <section id="contact" class="row">
@@ -90,11 +92,11 @@
 
   <footer>
     <div class="footcontain">
-      <span class="copyright">Copyright &copy; Kickstand 2015</span>
       <span><a href="#"><i class="fa fa-twitter fa-2x"></i></a></span>
-      <span><a href="#"><i class="fa fa-facebook fa-2x"></i></a></span>
+      <span><a href="#"><i class="fa fa-instagram fa-2x"></i></a></span> <span><a href="#"><i class="fa fa-facebook fa-2x"></i></a></span>
       <span><a href="#">Privacy Policy</a></span>
       <span><a href="#">Terms of Use</a></span>
+      <p class="copyright">Copyright &copy; Kickstand 2015</p>
     </div>
   </footer>
 
