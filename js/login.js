@@ -67,4 +67,4 @@ function userNotLogged() {
   var memWrap = document.getElementById("members-only");
   memWrap.style.display="inline-block";
   memWrap.style.visibility="hidden";
-};
+}; 
