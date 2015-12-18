@@ -510,6 +510,7 @@ footer div {
     left: 170px;
   }
   .fb-login-wrapper {
+    z-index: 20;
     position: relative;
     width: 300px;
     top: 30px;

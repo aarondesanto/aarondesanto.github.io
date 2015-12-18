@@ -50,6 +50,8 @@ function userLogged() {
         memIcon = document.createElement("img"),
         memText = document.createElement("p");
 
+    memDiv.innerText = "";
+
     memWrap.style.visibility="visible";
     memWrap.style.display="inline-block";
     memIcon.setAttribute("src", "img/memicon64.png");
@@ -65,4 +67,4 @@ function userNotLogged() {
   var memWrap = document.getElementById("members-only");
   memWrap.style.display="inline-block";
   memWrap.style.visibility="hidden";
-}; 
+};
