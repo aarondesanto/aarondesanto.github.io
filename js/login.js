@@ -54,8 +54,7 @@ function userLogged() {
     memWrap.style.display="inline-block";
     memIcon.setAttribute("src", "img/memicon64.png");
 
-    memText.innerText = "Keep an eye out for this icon to find deals from local businesses.";
-    memDiv.innerText = "Hi, " + response.first_name + "!";
+    memText.innerText = "Look for this icon to find special offers.";
 
     memDiv.appendChild(memIcon);
     memDiv.appendChild(memText);
@@ -64,6 +63,6 @@ function userLogged() {
 
 function userNotLogged() {
   var memWrap = document.getElementById("members-only");
-  memWrap.style.display="none";
+  memWrap.style.display="inline-block";
   memWrap.style.visibility="hidden";
-}; 
+};
