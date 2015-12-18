@@ -30,7 +30,7 @@ window.fbAsyncInit = function() {
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
-  }); 
+  });
 };
 
 
@@ -51,6 +51,7 @@ function userLogged() {
         memText = document.createElement("p");
 
     memWrap.style.visibility="visible";
+    memWrap.style.display="inline-block";
     memIcon.setAttribute("src", "img/memicon64.png");
 
     memText.innerText = "Keep an eye out for this icon to find deals from local businesses.";
@@ -63,5 +64,6 @@ function userLogged() {
 
 function userNotLogged() {
   var memWrap = document.getElementById("members-only");
-  memWrap.style.display="none";
+  memWrap.style.display="inline-block";
+  memWrap.style.visibility="hidden";
 };
